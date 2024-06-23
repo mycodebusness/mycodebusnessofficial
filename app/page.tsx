@@ -8,7 +8,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="w-full h-screen flex flex-col gap-8 items-center p-20">
+    <div className="w-full h-screen flex flex-col gap-8 items-center p-2">
       <h1 className=" gap-4 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-center mb-8 z-10">
         Bienvenue sur{" "}
         <span className="inline-flex">
@@ -28,11 +28,11 @@ export default function page() {
 
       <TypingAnimation
         duration={50}
-        className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0  z-10"
+        className=" text-xl text-center font-semibold tracking-tight first:mt-0  z-10"
         text="Ici,  vous allez apprendre par la pratique !!!"
       />
       <WordRotate
-        className="scroll-m-20 text-2xl font-semibold tracking-tightt  z-10 text-blue-700"
+        className="scroll-m-20 text-xl font-semibold tracking-tight  z-10 text-blue-700"
         words={[
           "vous deviendrez :",
           "Un pro du clavier et de la souris !",
