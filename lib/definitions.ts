@@ -4,7 +4,7 @@ export type User = {
   lastname: string;
   email: string;
   password: string;
-  createdAt: string | Date | number; // ISO date string
+  createdAt?: string | Date | number; // ISO date string
   image?: string;
   genre?: string;
   technologies?: string;

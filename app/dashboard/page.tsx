@@ -24,7 +24,11 @@ import AvatarUser from "@/components/avatarUser";
 // } from "@/lib/functions/data";
 import { Logo } from "@/components/dashboard/navBarLeft";
 import { auth } from "@/auth";
-import { fetchAllComments, fetchRecentUsers, fetchUserByEmail } from "@/lib/functions/data";
+import {
+  fetchAllComments,
+  fetchRecentUsers,
+  fetchUserByEmail,
+} from "@/lib/functions/data";
 // import { fetchRecentUsers } from "@/lib/functions/data";
 // import { useSession } from "next-auth/react";
 export const metadata: Metadata = {

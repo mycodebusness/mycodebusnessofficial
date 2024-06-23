@@ -9,16 +9,21 @@ declare type RecentUsers = {
   name: string;
   lastname: string;
   email: string;
-  createdat: Date;
-  image: string;
+  password: string;
+  createdAt?: string | Date | number; // ISO date string
+  image?: string;
+  genre?: string;
+  technologies?: string;
+  bio?: string;
+  numero?: string;
 }[];
 
 export function ListUsers({ recentUsers }: { recentUsers: RecentUsers }) {
   return (
     <div className="relative flex h-36 w-full flex-col overflow-hidden rounded-lg bg-background p-0 shadow-lg">
       <AnimatedList>
-        {recentUsers.map(({ createdat, email, image, lastname, name }) => {
-          const date = createdat.toString();
+        {recentUsers.map(({ createdAt, email, image, lastname, name }) => {
+          const date = createdAt?.toString() || new Date()?.toString();
           return (
             <figure
               key={email}
