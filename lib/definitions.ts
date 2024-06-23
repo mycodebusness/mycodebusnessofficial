@@ -11,6 +11,19 @@ export type User = {
   bio?: string;
   numero?: string;
 };
+export type Users = {
+  id: string;
+  name: string;
+  lastname: string;
+  email: string;
+  password: string;
+  createdAt?: string | Date | number; // ISO date string
+  image?: string;
+  genre?: string;
+  technologies?: string;
+  bio?: string;
+  numero?: string;
+}[];
 
 export type Project = {
   id: string;

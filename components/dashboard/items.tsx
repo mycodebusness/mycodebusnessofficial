@@ -11,7 +11,7 @@ export function Items({ users }: { users: Users }) {
   }
   return (
     <ul className="p-1.5 flex flex-wrap">
-      {users.map(({ id, name, image, email, createdAt }, index) => {
+      {users.map(({ id, name, email, createdAt }) => {
         const i = generateRandomNumber();
         const { color, initials } = getInitialsAndColor(name);
         return (
@@ -25,13 +25,21 @@ export function Items({ users }: { users: Users }) {
                   <div className="w-1/2 p-3">
                     <h3 className="font-semibold">Inscrit le :</h3>
                     <div className="">
-                      {new Date(createdAt).toLocaleString()?.split(" ")[0]}
+                      {
+                        new Date(createdAt ? createdAt : new Date())
+                          .toLocaleString()
+                          ?.split(" ")[0]
+                      }
                     </div>
                   </div>
                   <div className="w-1/2 p-3">
                     <h3 className="font-semibold">Depuis inscription :</h3>
                     <div className="flex gap-1">
-                      <Duration creationDate={createdAt} />
+                      <Duration
+                        creationDate={
+                          createdAt?.toString() || new Date().toString()
+                        }
+                      />
                     </div>
                   </div>
                 </div>
