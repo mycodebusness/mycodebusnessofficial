@@ -25,9 +25,9 @@ import Link from "next/link";
 //     createdAt: "01-01-2024",
 //   },
 // ];
-export default function Page() {
+export default async function Page() {
   const IconLink = () => Logo[4].icon;
-  const users = fetchAllUsers();
+  const users = await fetchAllUsers();
   return (
     <div className="p-4 mb-4">
       <div className="flex mb-4">
