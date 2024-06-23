@@ -290,8 +290,6 @@ export function AutorIdentity() {
   });
 
   function onSubmit(data: z.infer<typeof AutorIdentitySchema>) {
-    delete data.confirmPassword;
-
     toast({
       title: "Vous avez soumis les valeurs suivantes :",
       description: (
