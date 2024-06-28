@@ -7,7 +7,7 @@ import LoginForm from "@/components/forms/login-form";
 
 type Props = {};
 
-export default function page({}: Props) {
+export default function Page({}: Props) {
   return (
     <div className="w-full relative min-h-screen flex justify-center items-center lg:grid  lg:grid-cols-2 ">
       <div className="absolute top-2 right-2 lg:left-2">
