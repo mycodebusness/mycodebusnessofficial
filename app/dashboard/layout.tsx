@@ -28,7 +28,7 @@ export default async function RootLayout({
   //   image = "/images (8).jpeg";
   return (
     <>
-      <Header imageUrl={image ?? ""} name={`${lastname} ${name}`} />
+      <Header imageUrl={image ?? ""} name={`${lastname ?? ""} ${name ?? ""}`} />
       <div className="flex flex-col md:flex-row gap-4">
         <div className="w-14 hidden lg:block shrink-0" />
         <SidebarLeft />
